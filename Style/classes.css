@@ -1,0 +1,40 @@
+.shelf {
+	background: #b36200;
+	background: linear-gradient(180deg, #834800 65%, #ad5f00 100%);
+	height: 15vh;
+	margin: 1vh;
+
+	margin-bottom: 0;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.bin {
+	position: relative; /* enables absolute positioning inside */
+	background-image: url("https://www.svgrepo.com/show/254995/box-storage-box.svg");
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+
+	cursor: pointer;
+
+	width: 10vw;
+	aspect-ratio: 1;
+
+	padding-top: 4vh;
+	color: white;
+	font-size: xx-large;
+
+	border: none;
+	transition: all 0.25s;
+}
+
+.bin:hover {
+	transform: scale(0.95);
+}
+
+.bin:active {
+	transform: scale(0.9);
+}

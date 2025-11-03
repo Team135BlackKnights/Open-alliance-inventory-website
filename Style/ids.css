@@ -1,0 +1,13 @@
+#shelfContainer {
+	background-color: #693a00;
+	width: 50%;
+	height: 100%;
+	/* position: absolute; */
+	margin: auto;
+	margin-top: 1.5vh;
+
+	display: flex;
+	flex-direction: column;
+
+	padding-bottom: 1vh;
+}
