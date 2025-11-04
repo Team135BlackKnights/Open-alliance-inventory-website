@@ -11,3 +11,74 @@
 
 	padding-bottom: 1vh;
 }
+
+#dataButton{
+	background-color: #ff9900;
+	border: none;
+	color: white;
+	padding: 10px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 1vh;
+	cursor:pointer;
+	border-radius: 12px;
+	height: 40px;
+	font-weight:bold;
+	text-align:center;
+}
+
+
+#arrowButtonContainer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1vh;
+}
+
+button {
+	font-family: inherit;
+}
+
+#leftArrowButton , #rightArrowButton {
+	position: relative;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+	display: flex;
+	align-items: center;
+}
+
+/* Left arrow */
+#leftArrowButton::before {
+	content: "";
+	display: inline-block;
+	margin-right: 8px;
+	width: 8px;
+	height: 8px;
+	border-left: 3px solid white;
+	border-bottom: 3px solid white;
+	transform: rotate(45deg);
+}
+
+/* Right arrow */
+#rightArrowButton::after {
+	content: "";
+	display: inline-block;
+	margin-left: 8px;
+	width: 8px;
+	height: 8px;
+	border-right: 3px solid white;
+	border-top: 3px solid white;
+	transform: rotate(45deg);
+}
+
+/* Hover effect */
+#leftArrowButton:hover , #rightArrowButton:hover {
+	background-color: #2980b9;
+}

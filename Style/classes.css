@@ -38,3 +38,15 @@
 .bin:active {
 	transform: scale(0.9);
 }
+
+
+.footer{
+	color: white; 
+	font-size: 12px; 
+	font-weight: bold;
+	text-align: center;
+}
+
+.hidden{
+	display:none;
+}
