@@ -50,3 +50,8 @@
 .hidden{
 	display:none;
 }
+
+.pageButton {
+	background-color: #639aff;
+	padding: 15px;
+}

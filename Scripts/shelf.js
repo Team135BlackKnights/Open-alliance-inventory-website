@@ -7,7 +7,9 @@
 	<button class="bin">Screws</button>
 </div>
 */
+const searchParams = new URLSearchParams(window.location.search);
 
+const CUR_SHELF = searchParams.get('shelf');
 const SHELF_CONTAINER = document.getElementById("shelfContainer");
 
 var shelves = {}
@@ -35,9 +37,22 @@ function makeShelf(index)
 	return shelfBins;
 }
 
-makeShelf()
-makeShelf()
-makeShelf()
-makeShelf()
-makeShelf()
-console.log(makeShelf()[2]);
+function setupButtons()
+{
+	var shelfIndex = parseInt(CUR_SHELF);
+
+	document.getElementById("prevShelf").href = `./shelf.html?shelf=${shelfIndex - 1}`;
+	document.getElementById("nextShelf").href = `./shelf.html?shelf=${shelfIndex + 1}`;
+
+	if (shelfIndex - 1 == 0)
+		document.getElementById("prevShelf").href = "./";
+}
+
+makeShelf(0);
+makeShelf(1);
+makeShelf(2);
+makeShelf(3);
+makeShelf(4);
+makeShelf(5);
+
+setupButtons();
