@@ -32,7 +32,7 @@ function makeShelf(index) {
 	for (let i = 0; i < 5; i++) {
 		const bin = document.createElement("button");
 		bin.className = "bin";
-		bin.textContent = `Bin ${i + 1}`;
+		bin.textContent = `Bin ${(index * 5) + (i + 1)}`;
 		container.appendChild(bin);
 
 		bin.addEventListener('click', () => {
