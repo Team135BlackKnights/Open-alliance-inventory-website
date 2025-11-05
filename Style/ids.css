@@ -12,32 +12,10 @@
 	padding-bottom: 1vh;
 }
 
-#dataButton{
-	background-color: #ff9900;
-	border: none;
-	color: white;
-	padding: 10px 24px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin-top: 1vh;
-	cursor:pointer;
-	border-radius: 12px;
-	height: 40px;
-	font-weight:bold;
-	text-align:center;
-}
-
-
 #arrowButtonContainer {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 1vh;
-}
-
-button {
-	font-family: inherit;
 }
 
 #leftArrowButton , #rightArrowButton {
@@ -52,6 +30,8 @@ button {
 	transition: background-color 0.3s ease;
 	display: flex;
 	align-items: center;
+
+	position: absolute;
 }
 
 /* Left arrow */
@@ -88,5 +68,6 @@ button {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	left: 100px;
+	z-index: 99;
+	/* left: 100px; */
 }
