@@ -40,6 +40,7 @@ function makeShelf(index)
 function setupButtons()
 {
 	var shelfIndex = parseInt(CUR_SHELF);
+	if (shelfIndex == NaN) shelfIndex = 0;
 
 	document.getElementById("prevShelf").href = `./shelf.html?shelf=${shelfIndex - 1}`;
 	document.getElementById("nextShelf").href = `./shelf.html?shelf=${shelfIndex + 1}`;
