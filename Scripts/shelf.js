@@ -7,53 +7,53 @@
 	<button class="bin">Screws</button>
 </div>
 */
+
 const searchParams = new URLSearchParams(window.location.search);
+let shelfIndex = parseInt(searchParams.get('shelf'));
+if (isNaN(shelfIndex)) shelfIndex = 0;
 
-const CUR_SHELF = searchParams.get('shelf');
 const SHELF_CONTAINER = document.getElementById("shelfContainer");
+const shelves = {};
 
-var shelves = {}
+const screens = {
+	binScreen: document.getElementById('binScreen')
+};
 
-function makeShelf(index)
-{
-	var shelfBins = {}
+function showScreen(screenName) {
+	Object.values(screens).forEach(screen => screen.style.display = 'none');
+	screens[screenName].style.display = 'flex';
+}
 
-	var container = document.createElement("div");
+function makeShelf(index) {
+	const shelfBins = {};
+	const container = document.createElement("div");
 	container.className = "shelf";
 
-	for (i = 0; i < 5; i++)
-	{
-		var bin = document.createElement("button");
+	for (let i = 0; i < 5; i++) {
+		const bin = document.createElement("button");
 		bin.className = "bin";
+		bin.textContent = `Bin ${i + 1}`;
 		container.appendChild(bin);
+
+		bin.addEventListener('click', () => {
+			console.log(`Shelf ${index}, Bin ${i}`);
+			showScreen('binScreen');
+		});
 
 		shelfBins[i] = bin;
 	}
 
 	SHELF_CONTAINER.appendChild(container);
-
 	shelves[index] = shelfBins;
 
 	return shelfBins;
 }
 
-function setupButtons()
-{
-	var shelfIndex = parseInt(CUR_SHELF);
-	if (shelfIndex == NaN) shelfIndex = 0;
-
-	document.getElementById("prevShelf").href = `./shelf.html?shelf=${shelfIndex - 1}`;
+function setupButtons() {
+	document.getElementById("prevShelf").href =
+		shelfIndex <= 0 ? "./" : `./shelf.html?shelf=${shelfIndex - 1}`;
 	document.getElementById("nextShelf").href = `./shelf.html?shelf=${shelfIndex + 1}`;
-
-	if (shelfIndex - 1 == 0)
-		document.getElementById("prevShelf").href = "./";
 }
 
-makeShelf(0);
-makeShelf(1);
-makeShelf(2);
-makeShelf(3);
-makeShelf(4);
-makeShelf(5);
-
+for (let i = 0; i < 6; i++) makeShelf(i);
 setupButtons();
