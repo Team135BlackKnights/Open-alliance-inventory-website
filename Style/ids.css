@@ -70,4 +70,50 @@
 	position: absolute;
 	z-index: 99;
 	/* left: 100px; */
+	overflow-y: hidden;
+	overflow-x:hidden;
+}
+
+#binName{
+	width:1000px;
+	height:50px;
+	color:black;
+	padding: 15px;
+	position: relative;
+	left: 430px;
+	font-weight: bold;
+}
+
+#quantity{
+	width:1000px;
+	height:50px;
+	color:black;
+	padding:15px;
+	position: relative;
+	left:250px;
+	top:50px;
+	border-radius: 100px;
+}
+
+
+input[type=text] {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	box-sizing: border-box;
+  }
+
+  input[type=number] {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	box-sizing: border-box;
+  }
+
+#uploadFile{
+	color:black;
+	left:20px;
+	-ms-flex-align: center;
+	Top:90px;
+	border-radius: 100px;
 }
