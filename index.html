@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>OA Inventory</title>
 
-		<meta charset="UTF-8">
+<head>
+	<title>OA Inventory</title>
 
-		<link rel="stylesheet" href="Style/style.css">
-		<link rel="stylesheet" href="Style/ids.css">
-		<link rel="stylesheet" href="Style/classes.css">
-	</head>
-	<body>
-		<div id = "binScreen" class = "hidden">
-			<div id = "binScreen" class = "hidden"></div>
-			<a id="prevShelf" class="pageButton"><</a>
-			<div id = "binName">
-				<input type = "text" placeholder = "Put name of item here.">
-				<div id = "quantity">
-					<input type = "number" placeholder="Put number of items here">
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="Style/style.css">
+	<link rel="stylesheet" href="Style/ids.css">
+	<link rel="stylesheet" href="Style/classes.css">
+</head>
+
+<body>
+	<div id="binScreen" class="hidden">
+		<div id="binScreen" class="hidden"></div>
+		<a id="prevShelf" class="pageButton">
+			</a> <div id="binName">
+				<input type="text" placeholder="Put name of item here.">
+				<div id="quantity">
+					<input type="number" placeholder="Put number of items here">
 				</div>
-				<div id = "uploadFile">
+				<div id="uploadFile">
 					<form action="/upload-handler" method="post" enctype="multipart/form-data">
 						<label for="fileToUpload">Choose a file:</label>
 						<input type="file" id="fileToUpload" name="fileToUpload">
 						<br><br>
 						<input type="submit" value="Upload File">
-					  </form>
-					  
+					</form>
+
 				</div>
-	
-			</div>
 
-		</div>
+	</div>
 
-		<div id = "arrowButtonContainer">
-			<a id="prevShelf" class="pageButton"><</a>
-			<a id="nextShelf" class="pageButton">></a>
-		</div>
-		<div id="shelfContainer"></div>
-	</body>
+	</div>
 
-	<script src = "Scripts/index.js"></script>
+	<div id="arrowButtonContainer">
+		<a id="prevShelf" class="pageButton">
+			</a> <a id="nextShelf" class="pageButton">>
+		</a>
+	</div>
+	<div id="shelfContainer"></div>
+</body>
+
+<script src="Scripts/index.js"></script>
+
 </html>

@@ -11,7 +11,8 @@
 }
 
 .bin {
-	position: relative; /* enables absolute positioning inside */
+	position: relative;
+	/* enables absolute positioning inside */
 	background-image: url("https://www.svgrepo.com/show/254995/box-storage-box.svg");
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -40,15 +41,15 @@
 }
 
 
-.footer{
-	color: white; 
-	font-size: 12px; 
+.footer {
+	color: white;
+	font-size: 12px;
 	font-weight: bold;
 	text-align: center;
 }
 
-.hidden{
-	display:none;
+.hidden {
+	display: none;
 }
 
 .pageButton {

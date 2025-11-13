@@ -18,7 +18,8 @@
 	margin-top: 1vh;
 }
 
-#leftArrowButton , #rightArrowButton {
+#leftArrowButton,
+#rightArrowButton {
 	position: relative;
 	background-color: #3498db;
 	color: white;
@@ -59,11 +60,12 @@
 }
 
 /* Hover effect */
-#leftArrowButton:hover , #rightArrowButton:hover {
+#leftArrowButton:hover,
+#rightArrowButton:hover {
 	background-color: #2980b9;
 }
 
-#binScreen{
+#binScreen {
 	background-color: antiquewhite;
 	width: 100%;
 	height: 100%;
@@ -71,27 +73,28 @@
 	z-index: 99;
 	/* left: 100px; */
 	overflow-y: hidden;
-	overflow-x:hidden;
+	overflow-x: hidden;
+
 }
 
-#binName{
-	width:1000px;
-	height:50px;
-	color:black;
+#binName {
+	width: 1000px;
+	height: 50px;
+	color: black;
 	padding: 15px;
 	position: relative;
 	left: 430px;
 	font-weight: bold;
 }
 
-#quantity{
-	width:1000px;
-	height:50px;
-	color:black;
-	padding:15px;
+#quantity {
+	width: 1000px;
+	height: 50px;
+	color: black;
+	padding: 15px;
 	position: relative;
 	right: 20px;
-	top:50px;
+	top: 50px;
 	border-radius: 100px;
 }
 
@@ -102,33 +105,33 @@ input[type=text] {
 	margin: 10px 0;
 	box-sizing: border-box;
 	background-color: gray;
-	color:white;
+	color: white;
 	border-radius: 15px;
-  }
+}
 
-  input[type=number] {
+input[type=number] {
 	width: 100%;
 	padding: 12px;
 	margin: 10px 0;
 	box-sizing: border-box;
 	background-color: gray;
-	color:white;
+	color: white;
 	border-radius: 15px;
-  }
+}
 
-  input::placeholder{
-	color:white;
-  }
+input::placeholder {
+	color: white;
+}
 
-  input::grammar-error{
+input::grammar-error {
 	background-color: red;
-  }
+}
 
 
-#uploadFile{
-	color:black;
-	left:20px;
+#uploadFile {
+	color: black;
+	left: 20px;
 	-ms-flex-align: center;
-	Top:100px;
+	Top: 100px;
 	border-radius: 100px;
 }

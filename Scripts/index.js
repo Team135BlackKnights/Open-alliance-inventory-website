@@ -1,12 +1,14 @@
 const searchParams = new URLSearchParams(window.location.search);
 let shelfIndex = parseInt(searchParams.get('shelf'));
 if (isNaN(shelfIndex)) {
-    shelfIndex = 2; 
+    shelfIndex = 2;
 }
 
 const SHELF_CONTAINER = document.getElementById("shelfContainer");
 const shelves = {};
-const screens = { binScreen: document.getElementById('binScreen') };
+const screens = {
+    binScreen: document.getElementById('binScreen')
+};
 
 function showScreen(screenName) {
     Object.values(screens).forEach(screen => screen.style.display = 'none');
@@ -22,7 +24,7 @@ function makeShelf(index) {
         bin.className = "bin";
 
         bin.textContent = `Shelf ${index}, Bin ${(i + 1)}`;
-       
+
         container.appendChild(bin);
         bin.addEventListener('click', () => {
             console.log(`Shelf ${index}, Bin ${i}`);
@@ -41,8 +43,7 @@ function setupButtons() {
 }
 
 makeShelf(shelfIndex);
-for(let i = 0; i < 6; i++){
+for (let i = 0; i < 6; i++) {
     makeShelf(shelfIndex);
     setupButtons();
 }
-
