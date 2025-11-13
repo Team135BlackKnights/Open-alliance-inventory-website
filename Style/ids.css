@@ -90,7 +90,7 @@
 	color:black;
 	padding:15px;
 	position: relative;
-	left:250px;
+	right: 20px;
 	top:50px;
 	border-radius: 100px;
 }
@@ -101,6 +101,9 @@ input[type=text] {
 	padding: 12px;
 	margin: 10px 0;
 	box-sizing: border-box;
+	background-color: gray;
+	color:white;
+	border-radius: 15px;
   }
 
   input[type=number] {
@@ -108,12 +111,24 @@ input[type=text] {
 	padding: 12px;
 	margin: 10px 0;
 	box-sizing: border-box;
+	background-color: gray;
+	color:white;
+	border-radius: 15px;
   }
+
+  input::placeholder{
+	color:white;
+  }
+
+  input::grammar-error{
+	background-color: red;
+  }
+
 
 #uploadFile{
 	color:black;
 	left:20px;
 	-ms-flex-align: center;
-	Top:90px;
+	Top:100px;
 	border-radius: 100px;
 }
